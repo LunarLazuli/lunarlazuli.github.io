@@ -1,2 +1,2 @@
 # custom-homepage
-Fun homepage I made to work with HTML/CSS.
+Fun homepage I made to do some work with HTML/CSS.
