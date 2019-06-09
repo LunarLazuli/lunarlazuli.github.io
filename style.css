@@ -1,20 +1,23 @@
 .background-image {
-	  position: fixed;
-	  display: block;
-	  background-image: url('img/Background.jpg');
-	  background-repeat: no-repeat;
-	  background-position: center center;
-	  background-size: cover;
-	  width: 100%;
-	  height: 100%;
-	  z-index: -1;
+    position: fixed;
+    display: block;
+    background-image: url('img/Background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-img {
-	position: relative;
-	float: center;
-	bottom:0px;
-    width: auto\9; /* ie8 */
+#imgs {
+    position: relative;
+    float: center;
+    bottom: 0px;
+    height: 40vw;
+    /* width:50vh;*/
+    /* width: auto\9;*/
+    /* ie8 */
 }
 
 #bar {
@@ -31,6 +34,14 @@ img {
     box-shadow: 4px 4px gray;
 }
 
+#buttondiv {
+    font-family: 'Roboto', sans-serif;
+    background: rgba(255, 192, 203, 0.5);
+    padding-bottom: 2eu;
+    float: center;
+}
+
+
 #searchbutton {
     font-family: 'Roboto', sans-serif;
     display: block;
@@ -44,11 +55,19 @@ img {
 }
 
 #searcharea {
-	position: relative;
+    position: relative;
     font-family: 'Roboto', sans-serif;
     background: rgba(0, 0, 0, 0.5);
     padding-bottom: 20px;
-	padding-top: 20px;
+    padding-top: 20px;
+}
+
+#twitterfeed {
+    font-family: 'Roboto', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    padding-bottom: 2eu;
+    height: 100vh;
+    float: center;
 }
 
 h1 {
@@ -64,17 +83,17 @@ h3 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     color: pink;
-	font-size: 2em;
+    font-size: 2em;
     text-shadow: 4px 4px black;
     margin-bottom: 0;
 }
 
 body {
     height: 100%;
-	background-color: #323a3f;
+    background-color: #323a3f;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-	margin: 0; 
+    margin: 0;
     overflow: hidden;
 }
 
@@ -83,20 +102,21 @@ a:active,
 a:visited {
     color: white;
 }
-a:hover{
-	background-color: pink;
+
+a:hover {
+    background-color: pink;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0px;
+    list-style-type: none;
+    padding: 0px;
 }
 
 .dropbtn {
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 1vw;
-    font-size: 1vw;
+    padding: .5vw;
+    font-size: 1.5vw;
     border: none;
     cursor: pointer;
 }
@@ -113,8 +133,8 @@ ul {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     min-width: 160px;
-	font-size: .75vw;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size: .75vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -122,12 +142,15 @@ ul {
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
+    font-size: 1.5vw;
     text-decoration: none;
     display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: pink}
+.dropdown-content a:hover {
+    background-color: pink
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -140,52 +163,66 @@ ul {
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
+.scrolltext {
+    height: 2eu;
+    overflow: hidden;
+}
 
-<style style="text/css">
-.example2 {
- height: 50px;
- overflow: hidden;
- position: relative;
+.scrolltext h3 {
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform: translateX(-30%);
+    -webkit-transform: translateX(-30%);
+    transform: translateX(-30%);
+    /* Apply animation to this element */
+    -moz-animation: scrolltext 20s linear infinite;
+    -webkit-animation: scrolltext 20s linear infinite;
+    animation: scrolltext 20s linear infinite;
 }
-.example2 h3 {
- position: 	;
- font-size: 2vw;
- width: 100%;
- height: 100%;
- margin: 0;
- line-height: 50px;
- text-align: center;
- /* Starting position */
- -moz-transform:translateX(-30%);
- -webkit-transform:translateX(-30%);	
- transform:translateX(-30%);
- /* Apply animation to this element */	
- -moz-animation: example2 20s linear infinite;
- -webkit-animation: example2 20s linear infinite;
- animation: example2 20s linear infinite;
-}
+
 /* Move it (define the animation) */
-@-moz-keyframes example2 {
- 0%   { -moz-transform: translateX(-100%); }
- 100% { -moz-transform: translateX(100%); }
+@-moz-keyframes scrolltext {
+    0% {
+        -moz-transform: translateX(-100%);
+    }
+
+    100% {
+        -moz-transform: translateX(100%);
+    }
 }
-@-webkit-keyframes example2 {
- 0%   { -webkit-transform: translateX(-100%); }
- 100% { -webkit-transform: translateX(100%); }
+
+@-webkit-keyframes scrolltext {
+    0% {
+        -webkit-transform: translateX(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%);
+    }
 }
-@keyframes example2 {
- 0%   { 
- -moz-transform: translateX(-100%); /* Firefox bug fix */
- -webkit-transform: translateX(-100%); /* Firefox bug fix */
- transform: translateX(-100%); 		
- }
- 100% { 
- -moz-transform: translateX(100%); /* Firefox bug fix */
- -webkit-transform: translateX(100%); /* Firefox bug fix */
- transform: translateX(100%); 
- }
+
+@keyframes scrolltext {
+    0% {
+        -moz-transform: translateX(-100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateX(-100%);
+        /* Firefox bug fix */
+        transform: translateX(-100%);
+    }
+
+    100% {
+        -moz-transform: translateX(100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateX(100%);
+        /* Firefox bug fix */
+        transform: translateX(100%);
+    }
 }
-</style>
