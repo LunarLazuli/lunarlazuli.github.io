@@ -166,6 +166,16 @@ ul {
     list-style-type: none;
 }
 
+.leftfeed{
+position: absolute;
+left: 0;
+}
+
+.rightfeed {
+position: absolute;
+right: 0;	
+}
+
 .scrolltext {
     height: 2eu;
     overflow: hidden;
