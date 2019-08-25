@@ -116,7 +116,7 @@ ul {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: .5vw;
-    font-size: 1.5vw;
+    font-size: 1vw;
     border: none;
     cursor: pointer;
 }
@@ -176,63 +176,5 @@ position: absolute;
 right: 0;	
 }
 
-.scrolltext {
-    height: 2eu;
-    overflow: hidden;
-}
-
-.scrolltext h3 {
-    font-size: 2vw;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    line-height: 50px;
-    text-align: center;
-    /* Starting position */
-    -moz-transform: translateX(-30%);
-    -webkit-transform: translateX(-30%);
-    transform: translateX(-30%);
-    /* Apply animation to this element */
-    -moz-animation: scrolltext 20s linear infinite;
-    -webkit-animation: scrolltext 20s linear infinite;
-    animation: scrolltext 20s linear infinite;
-}
-
-/* Move it (define the animation) */
-@-moz-keyframes scrolltext {
-    0% {
-        -moz-transform: translateX(-100%);
-    }
-
-    100% {
-        -moz-transform: translateX(100%);
-    }
-}
-
-@-webkit-keyframes scrolltext {
-    0% {
-        -webkit-transform: translateX(-100%);
-    }
-
-    100% {
-        -webkit-transform: translateX(100%);
-    }
-}
-
-@keyframes scrolltext {
-    0% {
-        -moz-transform: translateX(-100%);
-        /* Firefox bug fix */
-        -webkit-transform: translateX(-100%);
-        /* Firefox bug fix */
-        transform: translateX(-100%);
-    }
-
-    100% {
-        -moz-transform: translateX(100%);
-        /* Firefox bug fix */
-        -webkit-transform: translateX(100%);
-        /* Firefox bug fix */
-        transform: translateX(100%);
-    }
+.greeting {
 }
